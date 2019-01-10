@@ -52,23 +52,22 @@
         .col-sm-12
           %ul.list-group-item.mt-4
             / %h3.font-weight-bold= link_to t.terms_translation.title, term_path(t)
-            .container
-              - translation = t.terms_translation
-              %h2.font-weight-bold.mb-4
-                = translation.title
-              .mt-4
-                = translation.content_html.html_safe
-              %hr
-              = t 'last_updated_at'
-              = l translation.updated_at.to_date
+            - translation = t.terms_translation
+            %h2.font-weight-bold.mb-4
+              = translation.title
+            .mt-4
+              = translation.content_html.html_safe
+            %hr
+            = t 'last_updated_at'
+            = l translation.updated_at.to_date
 
-              %hr
-              - if t.signed_by? @current_user
-                %span.text-success
-                  = PolicyManager::UsersTerm.human_attribute_name(:signed_at)
-                  = l @current_user.users_terms.where(term: t).first.signed_at
-              - if can? :sign, t
-                = button_to t('policy_manager_sign'), sign_term_path(t), class: 'btn btn-success w-100'
+            %hr
+            - if t.signed_by? @current_user
+              %span.text-success
+                = PolicyManager::UsersTerm.human_attribute_name(:signed_at)
+                = l @current_user.users_terms.where(term: t).first.signed_at
+            - if can? :sign, t
+              = button_to t('policy_manager_sign'), sign_term_path(t), class: 'btn btn-success w-100'
             %hr
             / .d-flex.row
             /   .col-6
