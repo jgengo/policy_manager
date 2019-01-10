@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{terms & conditions}
   spec.description   = %q{handle the creation and signing of terms}
-  spec.homepage      = "https://github.com/jeanne-b-/policy_manager"
+  spec.homepage      = "https://github.com/jgengo/policy_manager"
   spec.license       = "MIT"
 
   # Specify which files should be added to the gem when it is released.
