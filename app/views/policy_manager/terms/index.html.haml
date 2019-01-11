@@ -16,7 +16,8 @@
       .text-center.font-weight-bold
         - @scoped_terms.map do |target, count|
           = count
-          = t('policy_manager.terms.form.target_label', target: target.constantize.model_name.human.pluralize).underscore
+          = t('policy_manager.terms.form.target_label', target: target.constantize.model_name.human).underscore
+      .text-center Effective from: 20.12.2018
 
   .row
     - if PolicyManager::Config.is_admin?(@current_user)
