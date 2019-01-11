@@ -39,7 +39,7 @@ en:
       policy_manager/portability_request: Access and portability requests
       policy_manager/anonymize_request: Deletion and anonymization requests
       policy_manager/correction_request: Correction requests
-      policy_manager/term: Terms and Conditions
+      policy_manager/term: Hive Helsinki Privacy Policy
       policy_manager/users_term: Terms and Conditions signature
       policy_manager/terms_translation: Translations
     attributes:
